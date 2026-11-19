@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp — Claim Review</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <h1>Claim Review</h1>
+  <p>Retrieve a claim and inspect its original source records.</p>
+
+  <form id="ask">
+    <label for="q">Claim number</label>
+    <input
+      id="q"
+      placeholder="CLM-2404-04177"
+      autocomplete="off"
+      maxlength="14"
+      required
+    >
+    <button id="run" type="submit">Find claim</button>
+  </form>
+
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <section id="out" hidden>
+    <h2>Result</h2>
+    <p id="answer"></p>
+
+    <h2>Source evidence</h2>
+    <p>Record positions exclude the CSV header.</p>
+    <div id="evidence"></div>
+  </section>
+
+  <p>
+    This pilot reads static extracts. A claims reviewer remains
+    responsible for decisions. No credit notes are issued.
+  </p>
+</main>
+
+<script src="/app.js?v=2"></script>
+</body>
+</html>
